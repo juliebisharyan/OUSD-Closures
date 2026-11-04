@@ -1,4 +1,4 @@
-
+```css
 /* =========================
    GENERAL STYLES
 ========================= */
@@ -160,10 +160,11 @@ header div {
 
 
 /* =========================
-   MOBILE GRAPHICS
+   MOBILE GRAPHIC
 ========================= */
 
-.mobile-story-image {
+/* Hidden on desktop */
+.mobile-story-graphic {
     display: none;
 }
 
@@ -241,25 +242,40 @@ header div {
         width: 100%;
         padding: 0 22px;
         margin: 35px auto;
+        overflow: visible;
     }
 
-    .scroll-container p {
+    /* Pinned graphic */
+
+    .mobile-story-graphic {
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 10;
         width: 100%;
-        max-width: 100%;
-        padding: 0;
-        margin: 0 auto 45px;
-        font-size: 16px;
-        line-height: 1.7;
+        background: white;
+        padding: 10px 0;
     }
 
-    .mobile-story-image {
+    .mobile-story-graphic img {
         display: block;
         width: 100%;
         max-width: 100%;
         height: auto;
-        max-height: 400px;
+        max-height: 35vh;
         object-fit: contain;
-        margin: 0 auto 20px;
+        margin: 0 auto;
+    }
+
+    /* Story paragraphs */
+
+    .scroll-container p {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 0;
+        margin: 0 auto 50px;
+        font-size: 16px;
+        line-height: 1.7;
     }
 
 
@@ -321,37 +337,9 @@ header div {
         padding: 0 18px;
     }
 
-}
-
-
-/* MOBILE GRAPHICS */
-
-.mobile-story-image {
-    display: none;
-}
-
-@media screen and (max-width: 767px) {
-
-    .scroll-container {
-        width: 100%;
-        padding: 0 15px;
-        overflow: visible;
-    }
-
-    .scroll-container p {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0;
-        margin-bottom: 50px;
-    }
-
-    .mobile-story-image {
-        display: block;
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        object-fit: contain;
-        margin: 0 auto 20px;
+    .mobile-story-graphic img {
+        max-height: 30vh;
     }
 
 }
+```

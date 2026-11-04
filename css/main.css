@@ -1,39 +1,120 @@
-@media (min-width: 320px) and (max-width: 1024px) { 
+
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+    box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	font-family: Helvetica, sans-serif;
+html, body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-header[role="banner"]{
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: rgb(46, 111, 148);
+}
+
+a:visited {
+    color: rgb(21, 49, 66);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header[role="banner"] {
     background-image: url("../assets/headerpic.png");
     background-size: cover;
     background-position: center 50%;
     min-height: 100vh;
-    color:white;
+    min-height: 100svh;
+    color: white;
+    padding: 50px 25px;
+    text-align: center;
 }
 
-header div{
-    background-color:rgba(255, 255, 255, 0.75);
+header div {
+    background-color: rgba(255, 255, 255, 0.75);
     padding: 30px;
     color: black;
-}
-
-#description {
-    font-style: italic;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 #headline {
     font-weight: 600;
+    line-height: 1.15;
+}
+
+#description {
+    font-style: italic;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ARTICLE INTRO
+========================= */
+
+#paragraph1 {
+    max-width: 760px;
+    width: calc(100% - 50px);
+    margin: 5em auto 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   SCROLLING GRAPHICS
+========================= */
+
+.scroll-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.scroll-container p {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
 }
 
 [data-sticky-graphic] {
-	top: 35%;
+    top: 35%;
 }
+
+
+/* =========================
+   HIGHLIGHT COLORS
+========================= */
 
 .closed {
     background-color: rgba(233, 146, 135, 0.7);
-    
 }
 
 .merged {
@@ -48,25 +129,196 @@ header div{
     background-color: rgba(236, 188, 143, 0.7);
 }
 
+
+/* =========================
+   ARTICLE BODY
+========================= */
+
 .body {
-    margin-right: 340px;
-    margin-left: 340px;
-    margin-bottom: 40px;
+    max-width: 760px;
+    width: calc(100% - 50px);
+    margin: 0 auto 40px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#paragraph1 {
-    margin-right: 340px;
-    margin-left: 340px;
-    margin-bottom: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 5em;
+.body p {
+    line-height: 1.7;
+    margin-bottom: 25px;
 }
 
-a {
-    color: rgb(46, 111, 148);
+
+/* =========================
+   DATAWRAPPER CHARTS
+========================= */
+
+.body iframe {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none;
 }
 
-a:visited {
-    color: rgb(21, 49, 66);
+
+/* =========================
+   MOBILE GRAPHICS
+========================= */
+
+.mobile-story-image {
+    display: none;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (max-width: 1024px) {
+
+    #paragraph1,
+    .body {
+        max-width: 760px;
+        width: calc(100% - 60px);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 767px) {
+
+    body {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    /* Header */
+
+    header[role="banner"] {
+        min-height: 85svh;
+        height: auto !important;
+        padding: 40px 18px;
+        background-position: center center;
+    }
+
+    header div {
+        width: 100%;
+        padding: 22px 18px;
+    }
+
+    #headline {
+        font-size: clamp(29px, 8vw, 38px);
+        line-height: 1.15;
+        margin-bottom: 18px;
+    }
+
+    #description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+
+    /* Intro paragraph */
+
+    #paragraph1 {
+        width: calc(100% - 44px);
+        margin: 40px auto;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+
+    /* Scrolling section */
+
+    .scroll-container {
+        width: 100%;
+        padding: 0 22px;
+        margin: 35px auto;
+    }
+
+    .scroll-container p {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0 auto 45px;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .mobile-story-image {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+        margin: 0 auto 20px;
+    }
+
+
+    /* Article paragraphs */
+
+    .body {
+        width: calc(100% - 44px);
+        max-width: 100%;
+        margin: 40px auto;
+        padding: 0;
+    }
+
+    .body p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 22px;
+    }
+
+
+    /* Charts */
+
+    .body iframe {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media screen and (max-width: 380px) {
+
+    header[role="banner"] {
+        padding: 30px 15px;
+    }
+
+    header div {
+        padding: 20px 14px;
+    }
+
+    #headline {
+        font-size: 29px;
+    }
+
+    #description {
+        font-size: 15px;
+    }
+
+    #paragraph1,
+    .body {
+        width: calc(100% - 36px);
+    }
+
+    .scroll-container {
+        padding: 0 18px;
+    }
+
 }

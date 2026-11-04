@@ -1,118 +1,52 @@
-
-/* =========================
-   GENERAL STYLES
-========================= */
-
+/* General page settings */
 * {
     box-sizing: border-box;
 }
 
-html, body {
-    width: 100%;
-    max-width: 100%;
+html,
+body {
     margin: 0;
     padding: 0;
+    width: 100%;
     overflow-x: hidden;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 1.7;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Helvetica, sans-serif;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-a {
-    color: rgb(46, 111, 148);
-}
-
-a:visited {
-    color: rgb(21, 49, 66);
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
+/* Header */
 header[role="banner"] {
     background-image: url("../assets/headerpic.png");
     background-size: cover;
     background-position: center 50%;
     min-height: 100vh;
-    min-height: 100svh;
     color: white;
-    padding: 50px 25px;
-    text-align: center;
+    padding: 30px;
 }
 
 header div {
     background-color: rgba(255, 255, 255, 0.75);
     padding: 30px;
     color: black;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-#headline {
-    font-weight: 600;
-    line-height: 1.15;
+    width: 100%;
+    max-width: 850px;
 }
 
 #description {
     font-style: italic;
-    line-height: 1.5;
 }
 
-
-/* =========================
-   ARTICLE INTRO
-========================= */
-
-#paragraph1 {
-    max-width: 760px;
-    width: calc(100% - 50px);
-    margin: 5em auto 40px;
-    font-family: Arial, Helvetica, sans-serif;
+#headline {
+    font-weight: 600;
 }
 
-
-/* =========================
-   SCROLLING GRAPHICS
-========================= */
-
-.scroll-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.scroll-container p {
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.7;
-}
-
+/* Sticky graphics */
 [data-sticky-graphic] {
     top: 35%;
 }
 
-
-/* =========================
-   HIGHLIGHT COLORS
-========================= */
-
+/* Story highlight colors */
 .closed {
     background-color: rgba(233, 146, 135, 0.7);
 }
@@ -129,230 +63,148 @@ header div {
     background-color: rgba(236, 188, 143, 0.7);
 }
 
-
-/* =========================
-   ARTICLE BODY
-========================= */
-
+/* Main story text */
 .body {
+    width: calc(100% - 40px);
     max-width: 760px;
-    width: calc(100% - 50px);
     margin: 0 auto 40px;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
-.body p {
-    line-height: 1.7;
-    margin-bottom: 25px;
+#paragraph1 {
+    width: calc(100% - 40px);
+    max-width: 760px;
+    margin: 5em auto 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
-
-/* =========================
-   DATAWRAPPER CHARTS
-========================= */
-
-.body iframe {
-    display: block;
-    width: 100% !important;
-    max-width: 100% !important;
-    border: none;
+/* Scrollytelling section */
+.scroll-container {
+    width: 100%;
+    position: relative;
 }
 
+.scroll-container p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
 
-/* =========================
-   MOBILE GRAPHICS
-========================= */
-
-.mobile-story-image {
+/* Hide the mobile graphic on desktop */
+.mobile-story-graphic {
     display: none;
 }
 
-
-/* =========================
-   TABLET
-========================= */
-
-@media screen and (max-width: 1024px) {
-
-    #paragraph1,
-    .body {
-        max-width: 760px;
-        width: calc(100% - 60px);
-    }
-
+/* Links */
+a {
+    color: rgb(46, 111, 148);
 }
 
+a:visited {
+    color: rgb(21, 49, 66);
+}
 
-/* =========================
-   MOBILE
-========================= */
+/* Datawrapper charts */
+iframe {
+    max-width: 100%;
+}
 
+/* Mobile layout */
 @media screen and (max-width: 767px) {
 
-    body {
-        font-size: 16px;
-        line-height: 1.65;
-    }
-
-    /* Header */
-
     header[role="banner"] {
-        min-height: 85svh;
-        height: auto !important;
-        padding: 40px 18px;
-        background-position: center center;
+        min-height: 100vh;
+        padding: 20px;
+        background-position: center;
     }
 
     header div {
-        width: 100%;
-        padding: 22px 18px;
+        padding: 20px;
     }
 
     #headline {
-        font-size: clamp(29px, 8vw, 38px);
-        line-height: 1.15;
-        margin-bottom: 18px;
+        font-size: 28px;
     }
 
     #description {
         font-size: 16px;
         line-height: 1.5;
-        margin-bottom: 20px;
     }
-
-    header p {
-        font-size: 14px;
-    }
-
-
-    /* Intro paragraph */
 
     #paragraph1 {
-        width: calc(100% - 44px);
-        margin: 40px auto;
-        font-size: 17px;
-        line-height: 1.7;
+        width: calc(100% - 36px);
+        margin: 35px auto;
+        font-size: 16px;
     }
 
+    .body {
+        width: calc(100% - 36px);
+        margin: 0 auto 35px;
+        font-size: 16px;
+    }
 
-    /* Scrolling section */
-
+    /* Mobile scrollytelling graphic */
     .scroll-container {
         width: 100%;
-        padding: 0 22px;
-        margin: 35px auto;
+        padding: 0 18px;
+        overflow: visible;
+        position: relative;
     }
 
-    .scroll-container p {
+    .mobile-story-graphic {
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 10;
         width: 100%;
-        max-width: 100%;
-        padding: 0;
-        margin: 0 auto 45px;
-        font-size: 16px;
-        line-height: 1.7;
+        background: white;
+        padding: 10px 0;
     }
 
-    .mobile-story-image {
+    .mobile-story-graphic img {
         display: block;
         width: 100%;
         max-width: 100%;
         height: auto;
-        max-height: 400px;
+        max-height: 35vh;
         object-fit: contain;
-        margin: 0 auto 20px;
+        margin: 0 auto;
     }
 
-
-    /* Article paragraphs */
-
-    .body {
-        width: calc(100% - 44px);
+    /* Story paragraphs scroll beneath the pinned graphic */
+    .scroll-container p {
+        width: 100%;
         max-width: 100%;
-        margin: 40px auto;
-        padding: 0;
-    }
-
-    .body p {
+        margin: 0 0 50px;
+        padding: 20px 0;
         font-size: 16px;
-        line-height: 1.7;
-        margin-bottom: 22px;
+        line-height: 1.6;
     }
 
+    /* Make sure old inserted images don't appear */
+    .mobile-story-image {
+        display: none;
+    }
 
-    /* Charts */
-
-    .body iframe {
-        width: 100% !important;
-        min-width: 0 !important;
+    /* Responsive charts */
+    iframe {
         max-width: 100% !important;
     }
-
 }
 
-
-/* =========================
-   SMALL PHONES
-========================= */
-
+/* Smaller phones */
 @media screen and (max-width: 380px) {
 
-    header[role="banner"] {
-        padding: 30px 15px;
+    #headline {
+        font-size: 24px;
     }
 
     header div {
-        padding: 20px 14px;
+        padding: 16px;
     }
 
-    #headline {
-        font-size: 29px;
+    .mobile-story-graphic img {
+        max-height: 30vh;
     }
-
-    #description {
-        font-size: 15px;
-    }
-
-    #paragraph1,
-    .body {
-        width: calc(100% - 36px);
-    }
-
-    .scroll-container {
-        padding: 0 18px;
-    }
-
 }
-
-
-/* MOBILE GRAPHICS */
-
-.mobile-story-image {
-    display: none;
-}
-
-@media screen and (max-width: 767px) {
-
-    .scroll-container {
-        width: 100%;
-        padding: 0 15px;
-        overflow: visible;
-    }
-
-    .scroll-container p {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0;
-        margin-bottom: 50px;
-    }
-
-    .mobile-story-image {
-        display: block;
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        object-fit: contain;
-        margin: 0 auto 20px;
-    }
-
-}
-
